@@ -1,0 +1,199 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  background: #f5fffa;
+  line-height: 0; }
+
+header {
+  background: #1b9c72; }
+  header .header_in {
+    padding: 40px 0;
+    display: -webkit-flex;
+    display: flex; }
+    @media (max-width: 549px) {
+      header .header_in {
+        padding: 20px 0; } }
+    header .header_in .pc_toiawase {
+      display: block;
+      margin-left: auto;
+      padding-top: 5px; }
+      @media (max-width: 549px) {
+        header .header_in .pc_toiawase {
+          display: none; } }
+    header .header_in .sp_toiawase {
+      padding-top: 1%;
+      font-size: 20px;
+      line-height: 0;
+      display: block;
+      margin-left: auto;
+      color: white;
+      text-align: right; }
+      @media (min-width: 550px) {
+        header .header_in .sp_toiawase {
+          display: none; } }
+
+.cover_area {
+  text-align: left;
+  border-top: solid 10px black;
+  border-bottom: solid 10px  black;
+  background-image: url("../images/cover.png");
+  background-size: cover; }
+  .cover_area .container {
+    max-width: 1200px;
+    width: 100%; }
+  @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .cover_area {
+      background-image: url("../images/cover@2x.png"); } }
+  @media (min-width: 550px) {
+    .cover_area {
+      height: 500px; }
+      .cover_area img {
+        margin-top: 150px;
+        margin-left: 4%; } }
+  @media (max-width: 549px) {
+    .cover_area {
+      height: 250px; }
+      .cover_area img {
+        height: 90px;
+        margin-top: calc((250px - 90px) / 2);
+        margin-left: 4%; } }
+
+.people img {
+  display: block; }
+.people .flex_box {
+  display: -webkit-flex;
+  display: flex; }
+.people .fukidashi {
+  margin-top: 50px; }
+.people .fukidashi_one {
+  display: block;
+  margin-top: 10px; }
+.people .man_one {
+  margin-left: auto; }
+.people .women {
+  margin-top: 40px;
+  margin-left: 20px; }
+.people .man_two {
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: 20px; }
+
+.omakasekudasai .container {
+  max-width: 1200px;
+  width: 100%; }
+.omakasekudasai .man_three {
+  display: block;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px; }
+.omakasekudasai .teian {
+  text-align: center;
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 50px; }
+
+.tokucyo .container {
+  max-width: 1200px;
+  width: 100%; }
+.tokucyo p {
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 44px; }
+.tokucyo .midashi {
+  font-size: 40px;
+  font-size: 4rem;
+  padding-top: 50px;
+  padding-bottom: 15px; }
+
+.obi {
+  margin-top: 50px; }
+  .obi .container {
+    max-width: 1200px;
+    width: 100%; }
+
+.syurui .columns {
+  margin-left: 0; }
+@media (min-width: 550px) {
+  .syurui .left_area {
+    width: 70%;
+    margin-left: auto;
+    padding-right: 30px;
+    border-right: solid thin black; } }
+@media (min-width: 550px) {
+  .syurui .right_area {
+    width: 70%;
+    margin-right: auto;
+    padding-left: 30px; } }
+.syurui img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  height: 210px; }
+.syurui p {
+  text-align: left;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 44px;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+.syurui .top {
+  border-top: solid thin black; }
+
+.sample img {
+  display: block;
+  margin-top: 40px;
+  height: 270px; }
+  @media (max-width: 549px) {
+    .sample img {
+      margin-right: auto;
+      margin-left: auto; } }
+.sample p {
+  text-align: left;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 28px;
+  padding-top: 20px; }
+
+.toiawase_two .container {
+  max-width: 1200px;
+  width: 100%; }
+.toiawase_two .address {
+  font-size: 48px;
+  font-size: 4.8rem;
+  padding: 40px 0; }
+.toiawase_two p {
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 44px; }
+
+footer {
+  background: #1b9c72;
+  border-top: solid 10px black;
+  margin-top: 40px;
+  padding: 40px 0; }
+  footer p {
+    text-align: center;
+    font-size: 18px;
+    font-size: 1.8rem;
+    color: white; }
+
+h1 {
+  margin: 0;
+  padding: 0; }
+
+h2 {
+  line-height: 0;
+  margin-top: 50px;
+  margin-bottom: 0; }
+
+p {
+  margin-bottom: 0; }
+
+/*# sourceMappingURL=style.css.map */
