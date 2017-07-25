@@ -40,7 +40,7 @@ header {
   background-image: url("../images/cover.png");
   background-size: cover; }
   .cover_area .container {
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%; }
   @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .cover_area {
@@ -80,7 +80,7 @@ header {
   margin-right: 20px; }
 
 .omakasekudasai .container {
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%; }
 .omakasekudasai .man_three {
   display: block;
@@ -95,7 +95,7 @@ header {
   line-height: 50px; }
 
 .tokucyo .container {
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%; }
 .tokucyo p {
   text-align: center;
@@ -111,7 +111,7 @@ header {
 .obi {
   margin-top: 50px; }
   .obi .container {
-    max-width: 1200px;
+    max-width: 100%;
     width: 100%; }
 
 .syurui .columns {
@@ -161,7 +161,7 @@ header {
   padding-top: 20px; }
 
 .toiawase_two .container {
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%; }
 .toiawase_two .address {
   font-size: 48px;
