@@ -45,16 +45,22 @@ header {
   @media screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .cover_area {
       background-image: url("../images/cover@2x.png"); } }
+  .cover_area p {
+    color: white;
+    font-size: 36px;
+    font-size: 3.6rem;
+    line-height: 2.1;
+    display: block; }
   @media (min-width: 550px) {
     .cover_area {
       height: 500px; }
-      .cover_area img {
-        margin-top: 150px;
+      .cover_area p {
+        margin-top: 140px;
         margin-left: 4%; } }
   @media (max-width: 549px) {
     .cover_area {
       height: 250px; }
-      .cover_area img {
+      .cover_area p {
         height: 90px;
         margin-top: calc((250px - 90px) / 2);
         margin-left: 4%; } }
@@ -66,9 +72,26 @@ header {
   display: flex; }
 .people .fukidashi {
   margin-top: 50px; }
-.people .fukidashi_one {
-  display: block;
-  margin-top: 10px; }
+@media (min-width: 550px) {
+  .people .sotowaku {
+    background: white;
+    border: solid thin #eeeeee;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    height: 200px;
+    width: 90%;
+    padding: 0 50px;
+    text-align: center; } }
+.people p {
+  color: black;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 44px;
+  display: inline-block;
+  margin-top: 50px;
+  text-align: left;
+  word-wrap: break-word; }
 .people .man_one {
   margin-left: auto; }
 .people .women {
@@ -116,6 +139,9 @@ header {
 
 .syurui .columns {
   margin-left: 0; }
+.syurui .flex_box {
+  display: -webkit-flex;
+  display: flex; }
 @media (min-width: 550px) {
   .syurui .left_area {
     width: 70%;
@@ -132,23 +158,35 @@ header {
   margin-left: auto;
   margin-right: auto;
   margin-top: 40px;
-  padding-bottom: 40px;
-  box-sizing: border-box;
-  height: 210px; }
+  height: 150px; }
+.syurui .html {
+  padding-bottom: 15%;
+  margin-right: 0; }
+.syurui .css {
+  padding-top: 20%;
+  margin-left: 0; }
 .syurui p {
+  display: block;
   text-align: left;
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 44px;
   padding-top: 20px;
   padding-bottom: 20px; }
+.syurui .intro {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+  font-size: 30px;
+  font-size: 3rem;
+  color: #1b9c72; }
 .syurui .top {
   border-top: solid thin black; }
 
 .sample img {
   display: block;
-  margin-top: 40px;
-  height: 270px; }
+  height: 270px;
+  border: solid thin #eeeeee; }
   @media (max-width: 549px) {
     .sample img {
       margin-right: auto;
@@ -159,6 +197,11 @@ header {
   font-size: 1.8rem;
   line-height: 28px;
   padding-top: 20px; }
+.sample .sample_number {
+  text-align: center;
+  padding-top: 40px; }
+  .sample .sample_number span {
+    color: #1b9c72; }
 
 .toiawase_two .container {
   max-width: 100%;
@@ -184,13 +227,38 @@ footer {
     font-size: 1.8rem;
     color: white; }
 
+.danraku_one {
+  height: 120px;
+  background: #1b9c72;
+  margin-top: 50px;
+  border: solid thin black; }
+  .danraku_one p {
+    color: white;
+    font-size: 72px;
+    font-size: 7.2rem;
+    text-align: center;
+    padding-top: 60px;
+    line-height: 0; }
+
+.danraku_two {
+  height: 120px;
+  background: white;
+  margin-top: 50px;
+  border: solid thin #1b9c72; }
+  .danraku_two p {
+    color: #1b9c72;
+    font-size: 72px;
+    font-size: 7.2rem;
+    text-align: center;
+    padding-top: 60px;
+    line-height: 0; }
+
 h1 {
   margin: 0;
   padding: 0; }
 
 h2 {
   line-height: 0;
-  margin-top: 50px;
   margin-bottom: 0; }
 
 p {

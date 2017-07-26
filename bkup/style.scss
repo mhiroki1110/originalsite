@@ -78,34 +78,26 @@ header {
 
   //背景 retina_bg
 
-  background-image: url("../images/cover.png");
-  background-size: cover;
+    background-image: url("../images/cover.png");
+    background-size: cover;
 
-  @media screen and (-webkit-min-device-pixel-ratio:2),
-                  (min-resolution: 2dppx){
-  background-image: url("../images/cover@2x.png");
-  }
-  
-  p {
-    color: white;
-    @include fontsize(36);
-    line-height: 2.1;
-    display: block;
-  }
+    @media screen and (-webkit-min-device-pixel-ratio:2),
+                    (min-resolution: 2dppx){
+    background-image: url("../images/cover@2x.png");
+    }
   
   @media (min-width: 550px) {
     height: 500px;
     
-    p{
-      margin-top: 140px;
+    img{
+      margin-top: 150px;
       margin-left: 4%;
     }
   }
   
   @media (max-width: 549px) {
     height: 250px;
-    
-    p{
+    img{
       height: 90px;
       margin-top: calc((250px - 90px) / 2);
       margin-left: 4%;
@@ -127,26 +119,9 @@ header {
     margin-top: 50px;
   }
   
-  .sotowaku {
-    @media (min-width: 550px) {
-      background: white;
-      border: solid thin $gray;
-      @include border-radius(4px);
-      height: 200px;
-      width: 90%;
-      padding: 0 50px;
-      text-align: center; //親要素にcenter、子要素(p)にleftでテキストは左寄せのまま位置は中央寄せ
-    }
-  }
-  
-  p {
-    color: black;
-    @include fontsize(24);
-    line-height: 44px;
-    display: inline-block;
-    margin-top: 50px;
-    text-align: left;
-    word-wrap: break-word;
+  .fukidashi_one {
+    display: block;
+    margin-top: 10px;
   }
   
   .man_one {
@@ -229,10 +204,6 @@ header {
     //skeleton グリッド間のmargin初期化
   }
   
-  .flex_box {
-    @include display-flex;
-  }
-  
   .left_area  {
     @media (min-width: 550px) {
       width: 70%;  
@@ -255,37 +226,17 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-top: 40px;
-    // box-sizing: border-box;
-    height: 150px;
-  }
-  
-  .html {
-    // height: 50%;
-    padding-bottom: 15%;
-    margin-right: 0;
-  }
-  
-  .css {
-    // height: 50%;
-    padding-top: 20%;
-    margin-left: 0;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+    height: 210px;
   }
   
   p {
-    display: block;
     text-align: left;
     @include fontsize(24);
     line-height: 44px;
     padding-top: 20px;
     padding-bottom: 20px;
-  }
-  
-  .intro {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-    @include fontsize(30);
-    color: $green;
   }
   
   .top {
@@ -298,8 +249,8 @@ header {
   
   img {
     display: block;
+    margin-top: 40px;
     height: 270px;
-    border: solid thin $gray;
     
     @media (max-width:549px) {
       margin-right: auto;
@@ -312,16 +263,6 @@ header {
     @include fontsize(18);
     line-height: 28px;
     padding-top: 20px;
-  }
-  
-  .sample_number {
-    text-align: center;
-    padding-top: 40px;
-
-    span {
-      color: $green;
-    }
-    
   }
   
 }
@@ -362,36 +303,6 @@ footer{
   
 }
 
-.danraku_one {
-  height: 120px;
-  background: $green;
-  margin-top: 50px;
-  border: solid thin black;
-  
-  p{
-    color: white;
-    @include fontsize(72);
-    text-align: center;
-    padding-top: 60px;
-    line-height: 0;
-  }
-}
-
-.danraku_two {
-  height: 120px;
-  background: white;
-  margin-top: 50px;
-  border: solid thin $green;
-  
-  p{
-    color: $green;
-    @include fontsize(72);
-    text-align: center;
-    padding-top: 60px;
-    line-height: 0;
-  }
-}
-
 h1{
   margin: 0;
   padding: 0;
@@ -399,6 +310,7 @@ h1{
 
 h2 {
   line-height: 0;
+  margin-top: 50px;
   margin-bottom: 0;
 }
 
