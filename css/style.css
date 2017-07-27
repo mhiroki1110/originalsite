@@ -47,64 +47,94 @@ header {
       background-image: url("../images/cover@2x.png"); } }
   .cover_area p {
     color: white;
-    font-size: 36px;
-    font-size: 3.6rem;
-    line-height: 2.1;
     display: block; }
   @media (min-width: 550px) {
     .cover_area {
       height: 500px; }
       .cover_area p {
+        font-size: 36px;
+        font-size: 3.6rem;
+        line-height: 2.1;
         margin-top: 140px;
         margin-left: 4%; } }
   @media (max-width: 549px) {
     .cover_area {
       height: 250px; }
       .cover_area p {
-        height: 90px;
-        margin-top: calc((250px - 90px) / 2);
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 2;
+        margin-top: 70px;
         margin-left: 4%; } }
 
 .people img {
   display: block; }
+  @media (max-width: 549px) {
+    .people img {
+      margin-left: auto;
+      margin-right: auto; } }
 .people .flex_box {
   display: -webkit-flex;
-  display: flex; }
-.people .fukidashi {
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
   margin-top: 50px; }
-@media (min-width: 550px) {
-  .people .sotowaku {
-    background: white;
-    border: solid thin #eeeeee;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    height: 200px;
-    width: 90%;
-    padding: 0 50px;
-    text-align: center; } }
+  @media (max-width: 549px) {
+    .people .flex_box {
+      -webkit-flex-direction: column;
+      flex-direction: column; } }
+@media (max-width: 549px) {
+  .people .reverse {
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse; } }
+.people .sotowaku {
+  background: white;
+  border: solid thin #eeeeee;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  height: 200px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center; }
 .people p {
   color: black;
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 44px;
-  display: inline-block;
-  margin-top: 50px;
-  text-align: left;
-  word-wrap: break-word; }
-.people .man_one {
-  margin-left: auto; }
-.people .women {
-  margin-top: 40px;
-  margin-left: 20px; }
-.people .man_two {
-  margin-top: 25px;
-  margin-left: auto;
-  margin-right: 20px; }
+  word-wrap: break-word;
+  padding-left: 10%;
+  padding-right: 7%; }
+  @media (min-width: 550px) {
+    .people p {
+      font-size: 20px;
+      font-size: 2rem;
+      line-height: 44px; } }
+  @media (max-width: 549px) {
+    .people p {
+      font-size: 16px;
+      font-size: 1.6rem;
+      line-height: 36px; } }
+@media (min-width: 550px) {
+  .people .man_one {
+    margin-left: auto; } }
+@media (min-width: 550px) {
+  .people .women {
+    margin-left: 20px; } }
+@media (min-width: 550px) {
+  .people .man_two {
+    margin-left: auto;
+    margin-right: 20px; } }
 
 .omakasekudasai .container {
   max-width: 100%;
   width: 100%; }
+  @media (max-width: 549px) {
+    .omakasekudasai .container {
+      padding: 0; } }
 .omakasekudasai .man_three {
   display: block;
   margin-top: 40px;
@@ -116,72 +146,110 @@ header {
   font-size: 30px;
   font-size: 3rem;
   line-height: 50px; }
+  @media (max-width: 549px) {
+    .omakasekudasai .teian {
+      text-align: left;
+      font-size: 28px;
+      font-size: 2.8rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px; } }
 
 .tokucyo .container {
   max-width: 100%;
   width: 100%; }
+  @media (max-width: 549px) {
+    .tokucyo .container {
+      padding: 0; } }
 .tokucyo p {
   text-align: center;
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 44px; }
+  @media (max-width: 549px) {
+    .tokucyo p {
+      text-align: left;
+      font-size: 18px;
+      font-size: 1.8rem;
+      margin-left: auto;
+      margin-right: auto; } }
 .tokucyo .midashi {
   font-size: 40px;
   font-size: 4rem;
   padding-top: 50px;
   padding-bottom: 15px; }
+  @media (max-width: 549px) {
+    .tokucyo .midashi {
+      text-align: left;
+      font-size: 24px;
+      font-size: 2.4rem;
+      margin-left: auto;
+      margin-right: auto; } }
 
 .obi {
   margin-top: 50px; }
   .obi .container {
     max-width: 100%;
     width: 100%; }
+    @media (max-width: 549px) {
+      .obi .container {
+        padding: 0; } }
 
-.syurui .columns {
-  margin-left: 0; }
-.syurui .flex_box {
-  display: -webkit-flex;
-  display: flex; }
-@media (min-width: 550px) {
+.syurui {
+  margin-top: 40px; }
+  .syurui .columns {
+    margin-left: 0; }
+  .syurui .flex_box {
+    display: -webkit-flex;
+    display: flex; }
   .syurui .left_area {
-    width: 70%;
-    margin-left: auto;
-    padding-right: 30px;
-    border-right: solid thin black; } }
-@media (min-width: 550px) {
+    border-right: solid thin black;
+    padding-right: 30px; }
+    @media (min-width: 870px) {
+      .syurui .left_area {
+        width: 70%;
+        margin-left: auto; } }
   .syurui .right_area {
-    width: 70%;
+    padding-left: 30px; }
+    @media (min-width: 870px) {
+      .syurui .right_area {
+        width: 70%;
+        margin-right: auto; } }
+  .syurui img {
+    display: block;
+    margin-left: auto;
     margin-right: auto;
-    padding-left: 30px; } }
-.syurui img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 40px;
-  height: 150px; }
-.syurui .html {
-  padding-bottom: 15%;
-  margin-right: 0; }
-.syurui .css {
-  padding-top: 20%;
-  margin-left: 0; }
-.syurui p {
-  display: block;
-  text-align: left;
-  font-size: 24px;
-  font-size: 2.4rem;
-  line-height: 44px;
-  padding-top: 20px;
-  padding-bottom: 20px; }
-.syurui .intro {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  text-align: center;
-  font-size: 30px;
-  font-size: 3rem;
-  color: #1b9c72; }
-.syurui .top {
-  border-top: solid thin black; }
+    height: 150px; }
+  .syurui .html {
+    padding-bottom: 15%;
+    margin-right: 0; }
+  .syurui .css {
+    padding-top: 20%;
+    margin-left: 0; }
+  .syurui p {
+    display: block;
+    text-align: left;
+    font-size: 24px;
+    font-size: 2.4rem;
+    line-height: 44px;
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    @media (max-width: 549px) {
+      .syurui p {
+        text-align: left;
+        font-size: 18px;
+        font-size: 1.8rem;
+        margin-left: auto;
+        margin-right: auto; } }
+  .syurui .intro {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-size: 3rem;
+    color: #1b9c72; }
+  .syurui .top {
+    border-top: solid thin black; }
 
 .sample img {
   display: block;
@@ -197,6 +265,13 @@ header {
   font-size: 1.8rem;
   line-height: 28px;
   padding-top: 20px; }
+  @media (max-width: 549px) {
+    .sample p {
+      text-align: left;
+      font-size: 18px;
+      font-size: 1.8rem;
+      margin-left: auto;
+      margin-right: auto; } }
 .sample .sample_number {
   text-align: center;
   padding-top: 40px; }
@@ -206,15 +281,30 @@ header {
 .toiawase_two .container {
   max-width: 100%;
   width: 100%; }
+  @media (max-width: 549px) {
+    .toiawase_two .container {
+      padding: 0; } }
 .toiawase_two .address {
+  text-align: center;
   font-size: 48px;
   font-size: 4.8rem;
   padding: 40px 0; }
+  @media (max-width: 549px) {
+    .toiawase_two .address {
+      font-size: 26px;
+      font-size: 2.6rem; } }
 .toiawase_two p {
   text-align: center;
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 44px; }
+  @media (max-width: 549px) {
+    .toiawase_two p {
+      text-align: left;
+      font-size: 18px;
+      font-size: 1.8rem;
+      margin-left: auto;
+      margin-right: auto; } }
 
 footer {
   background: #1b9c72;
@@ -226,6 +316,10 @@ footer {
     font-size: 18px;
     font-size: 1.8rem;
     color: white; }
+    @media (max-width: 549px) {
+      footer p {
+        font-size: 12px;
+        font-size: 1.2rem; } }
 
 .danraku_one {
   height: 120px;
@@ -234,24 +328,35 @@ footer {
   border: solid thin black; }
   .danraku_one p {
     color: white;
-    font-size: 72px;
-    font-size: 7.2rem;
+    font-size: 48px;
+    font-size: 4.8rem;
     text-align: center;
     padding-top: 60px;
     line-height: 0; }
+    @media (max-width: 549px) {
+      .danraku_one p {
+        font-size: 26px;
+        font-size: 2.6rem; } }
 
 .danraku_two {
   height: 120px;
   background: white;
   margin-top: 50px;
   border: solid thin #1b9c72; }
+  @media (max-width: 549px) {
+    .danraku_two {
+      margin-top: 0px; } }
   .danraku_two p {
     color: #1b9c72;
-    font-size: 72px;
-    font-size: 7.2rem;
+    font-size: 48px;
+    font-size: 4.8rem;
     text-align: center;
     padding-top: 60px;
     line-height: 0; }
+    @media (max-width: 549px) {
+      .danraku_two p {
+        font-size: 26px;
+        font-size: 2.6rem; } }
 
 h1 {
   margin: 0;
@@ -263,5 +368,12 @@ h2 {
 
 p {
   margin-bottom: 0; }
+
+@media (max-width: 869px) {
+  .br-pc {
+    display: none; } }
+@media (min-width: 870px) {
+  .br-sp {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -88,8 +88,6 @@ header {
   
   p {
     color: white;
-    @include fontsize(36);
-    line-height: 2.1;
     display: block;
   }
   
@@ -97,6 +95,8 @@ header {
     height: 500px;
     
     p{
+      @include fontsize(36);
+      line-height: 2.1;
       margin-top: 140px;
       margin-left: 4%;
     }
@@ -106,8 +106,9 @@ header {
     height: 250px;
     
     p{
-      height: 90px;
-      margin-top: calc((250px - 90px) / 2);
+      @include fontsize(18);
+      line-height: 2;
+      margin-top: 70px;
       margin-left: 4%;
     }
   }
@@ -117,51 +118,87 @@ header {
   
   img {
     display: block;
+    
+    @media (max-width: 549px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   
   .flex_box {
     @include display-flex;
+    @include align-items(center); 
+    margin-top: 50px;
+
+    @media (max-width: 549px) {
+      @include flex-direction(column);
+    }
+    
+  }
+  
+  .reverse {
+
+    @media (max-width: 549px) {
+      @include flex-direction(column-reverse);
+    }
+    
   }
   
   .fukidashi {
-    margin-top: 50px;
+    // margin-top: 50px;
   }
   
   .sotowaku {
-    @media (min-width: 550px) {
-      background: white;
-      border: solid thin $gray;
-      @include border-radius(4px);
-      height: 200px;
-      width: 90%;
-      padding: 0 50px;
-      text-align: center; //親要素にcenter、子要素(p)にleftでテキストは左寄せのまま位置は中央寄せ
-    }
+    background: white;
+    border: solid thin $gray;
+    @include border-radius(4px);
+    height: 200px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    //中のp要素を上下中央寄せ
+    @include display-flex;
+    @include justify-content(center);
+    @include align-items(center);  
   }
-  
+
   p {
     color: black;
-    @include fontsize(24);
-    line-height: 44px;
-    display: inline-block;
-    margin-top: 50px;
-    text-align: left;
     word-wrap: break-word;
+    padding-left: 10%;
+    padding-right: 7%;
+    
+    @media (min-width:550px) {
+      @include fontsize(20);
+      line-height: 44px;
+    }
+    
+    @media (max-width:549px) {
+      @include fontsize(16);
+      line-height: 36px;
+    }
+    
   }
   
   .man_one {
-    margin-left: auto;
+    @media (min-width: 550px) {
+      margin-left: auto;
+    }
   }
   
   .women {
-    margin-top: 40px;
-    margin-left: 20px;
+    @media (min-width: 550px) {
+      // margin-top: 40px;
+      margin-left: 20px;
+    }
   }
   
   .man_two {
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: 20px;
+    @media (min-width: 550px) {
+      // margin-top: 25px;
+      margin-left: auto;
+      margin-right: 20px;
+    }
   }
 
 }
@@ -172,6 +209,11 @@ header {
     max-width: 100%;
     width: 100%;
     //skeletonのwidth960pxを初期化
+    
+    @media (max-width: 549px) {
+      padding: 0;
+    }
+    
   }
   
   .man_three {
@@ -186,6 +228,15 @@ header {
     text-align: center;
     @include fontsize(30);
     line-height: 50px;
+    
+    @media (max-width: 549px) {
+      text-align: left;
+      @include fontsize(28);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+    }
+    
   }
   
 }
@@ -196,18 +247,36 @@ header {
     max-width: 100%;
     width: 100%;
     //skeletonのwidth960pxを初期化
+    
+    @media (max-width: 549px) {
+      padding: 0;
+    }
   }
   
   p {
     text-align: center;
     @include fontsize(24);
     line-height: 44px;
+    
+    @media (max-width: 549px) {
+      text-align: left;
+      @include fontsize(18);
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   
   .midashi {
     @include fontsize(40);
     padding-top: 50px;
     padding-bottom: 15px;
+    
+    @media (max-width: 549px) {
+      text-align: left;
+      @include fontsize(24);
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   
 }
@@ -219,10 +288,17 @@ header {
     max-width: 100%;
     width: 100%;
     //skeletonのwidth960pxを初期化
+      
+    @media (max-width: 549px) {
+      padding: 0;
+    }
   }
+
 }
 
 .syurui {
+  
+  margin-top: 40px;
   
   .columns {
     margin-left: 0;
@@ -234,19 +310,21 @@ header {
   }
   
   .left_area  {
-    @media (min-width: 550px) {
+    border-right: solid thin black;
+    padding-right: 30px;
+  
+    @media (min-width: 870px) {
       width: 70%;  
       margin-left: auto;
-      padding-right: 30px;
-      border-right: solid thin black;
     }
   }
   
   .right_area  {
-    @media (min-width: 550px) {
+    padding-left: 30px;
+    
+    @media (min-width: 870px) {
       width: 70%;  
       margin-right: auto;
-      padding-left: 30px;
     }
   }
   
@@ -254,7 +332,6 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
     // box-sizing: border-box;
     height: 150px;
   }
@@ -278,11 +355,19 @@ header {
     line-height: 44px;
     padding-top: 20px;
     padding-bottom: 20px;
+    
+    @media (max-width: 549px) {
+      text-align: left;
+      @include fontsize(18);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
   }
   
   .intro {
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     text-align: center;
     @include fontsize(30);
     color: $green;
@@ -312,6 +397,14 @@ header {
     @include fontsize(18);
     line-height: 28px;
     padding-top: 20px;
+    
+    @media (max-width: 549px) {
+      text-align: left;
+      @include fontsize(18);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
   }
   
   .sample_number {
@@ -332,17 +425,34 @@ header {
     max-width: 100%;
     width: 100%;
     //skeletonのwidth960pxを初期化
+    
+    @media (max-width: 549px) {
+      padding: 0;
+    }
   }
   
   .address {
+    text-align: center;
     @include fontsize(48);
     padding: 40px 0;
+    
+    @media (max-width: 549px) {
+      @include fontsize(26);
+    }
   }
   
   p {
     text-align: center;
     @include fontsize(24);
     line-height: 44px;
+    
+    @media (max-width: 549px) {
+      text-align: left;
+      @include fontsize(18);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
   }
   
 }
@@ -358,6 +468,11 @@ footer{
     text-align: center;
     @include fontsize(18);
     color: white;
+    
+    @media (max-width: 549px) {
+      @include fontsize(12);
+    }
+    
   }
   
 }
@@ -370,10 +485,14 @@ footer{
   
   p{
     color: white;
-    @include fontsize(72);
+    @include fontsize(48);
     text-align: center;
     padding-top: 60px;
     line-height: 0;
+    
+    @media (max-width: 549px) {
+      @include fontsize(26);
+    }
   }
 }
 
@@ -383,12 +502,20 @@ footer{
   margin-top: 50px;
   border: solid thin $green;
   
+  @media (max-width: 549px) {
+    margin-top: 0px;
+  }
+  
   p{
     color: $green;
-    @include fontsize(72);
+    @include fontsize(48);
     text-align: center;
     padding-top: 60px;
     line-height: 0;
+    
+    @media (max-width: 549px) {
+      @include fontsize(26);
+    }
   }
 }
 
@@ -405,3 +532,17 @@ h2 {
 p {
   margin-bottom: 0;
 }
+
+@media (max-width: 869px) {
+	.br-pc { 
+	  display:none;
+	}
+}
+//スマホでは改行しない
+
+@media (min-width: 870px) {
+	.br-sp { 
+	  display:none;
+	}
+}
+//pcでは改行しない
