@@ -1,0 +1,534 @@
+@import "compass";
+@charset "utf-8";
+
+html {
+    font-size: 62.5%;
+}
+
+@mixin fontsize($size: 24, $base: 10) {
+    font-size: $size + px;
+    font-size: ($size / $base) * 1rem;
+}
+
+$ja_font : "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Verdana, "ＭＳ Ｐゴシック", sans-serif;
+$brown : #887f69;
+$lgray : #f9f8f6;
+$mgray : #e2ddd4;
+$dgray : #b0b0b0;
+$red : #9d1a2d;  
+
+header {
+  background: $lgray;
+  
+  @media(max-width: 549px) {
+    .pc_navi{
+      display: none;
+    }
+    .pc_fbin{
+      display: none;
+    }
+  }
+  
+  @media(min-width: 550px) {
+    .sp_logo {
+      display: none;
+    }
+    .sp_menu{
+      display: none;
+    }
+  }
+  
+  .sp_logo {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  .sp_menu {
+    text-align: center;
+    padding:10px 0;
+    
+    #sp_navi_btn {
+      cursor: pointer;
+    }
+    
+    #sp_instagram_btn {
+      margin: 0 10px;
+    }
+    
+    .sp_navi_li {
+       display: none;
+       list-style: none;
+    }
+    
+  }
+  
+  .pc_logo {
+    padding-top: 40px;
+    
+    @media(max-width: 549px) {
+      display: none;
+    }
+  }
+  
+  .pc_menu {
+    display: flex;
+    @include justify-content(flex-end);
+    padding-top: 60px;
+
+    @media (max-width: 549px) {
+      display: none;
+    }
+    // メモ：@mediaは各クラスの中で定義する。上の方でまとめて定義したりしない（同じクラスについて下の方で定義すると上書きされてしまうため）
+    
+    .pc_navi li{
+      list-style: none;
+      display: inline-block;
+      padding-right: 20px;
+    }
+    
+    #facebook_btn {
+      padding-right: 5px
+    }
+    
+  }
+  
+}
+
+.main {
+  
+  background: $lgray;
+  
+  .container {
+      border-bottom: thin solid $brown;
+  }
+  
+  .cover_area {
+    
+    @media(min-width: 550px) {
+      padding-top: 40px;
+    }
+
+  }
+  
+  .pc_newitems_title {
+    padding: 30px 0;
+    
+    @media(max-width: 549px) {
+      display: none;
+    }
+  }
+  
+  .sp_newitems_title {
+    padding: 15px 0;
+    display: block;
+    margin: 0 auto;
+    // メモ：imgはブロック要素ではないので、text-align centerは効かない
+  
+    @media(min-width: 550px) {
+      display: none;
+    }
+  }
+  
+  .newitem_area {
+    
+  background: $lgray;
+    
+    .flex_box {
+      @include display-flex;
+      @include flex-wrap(wrap);
+      @include justify-content(space-between);
+      // メモ：@include→compassを使用（冒頭でインポートも忘れず）
+      //       flex-wrap→flex内で自動的に改行してくれるプロパティ
+      //       justify-content→flexboxを左右端から等間隔(between)で配置、ボックス間に隙間を空けるために指定
+      
+      @media (min-width: 550px) {
+        .newitems:nth-child(n + 4) {
+          margin-top: 6px;
+        }
+      }
+      @media (max-width: 549px) {
+        .newitems:nth-child(n + 3) {
+          margin-top: 6px;
+        }
+      }
+      //メモ：行の区切り線をつくるため、PC表示では4個め3個目以降のnewitemsにmarginをつける
+  
+      .newitems {
+        background: white;
+        text-align: center;
+        // @include flex(1);
+        padding: 10px;
+        
+        @media (min-width: 550px) {
+          width: 30%;
+        }
+        
+        @media (max-width: 549px) {
+          width: 49%;
+          box-sizing: border-box; //メモ：このままでは上記のpadding 10がwidht(49%の収縮)に含まれないため、paddingも一緒に収縮するように本項目を定義する。
+        } 
+      }
+      
+      .newitems p{
+        text-align: left;
+        @include fontsize(12);
+      }
+    }
+  }
+  
+  .pc_popularitems_title {
+    padding: 30px 0;
+    
+    @media(max-width: 549px) {
+      display: none;
+    }
+  }
+  
+  .sp_popularitems_title {
+    padding: 20px 0;
+    display: block;
+    margin: 0 auto;
+  
+    @media(min-width: 550px) {
+      display: none;
+    }
+  }
+  
+  .popularitem_area {
+    
+  background: $lgray;
+    
+    .flex_box {
+      @include display-flex;
+      @include flex-wrap(wrap);
+      @include justify-content(space-between);
+    
+      @media (min-width: 550px) {
+        .popularitems:nth-child(n + 4) {
+          margin-top: 6px;
+        }
+      }
+      @media (max-width: 549px) {
+        .popularitems:nth-child(n + 3) {
+          margin-top: 6px;
+        }
+      }
+  
+      .popularitems {
+        background: white;
+        text-align: center;
+        // @include flex(1);
+        padding: 10px;
+        
+        @media (min-width: 550px) {
+          width: 30%;
+        }
+        
+        @media (max-width: 549px) {
+          width: 49%;
+          box-sizing: border-box;
+        } 
+      }
+      
+      .popularitems p{
+        text-align: left;
+        @include fontsize(12);
+      }
+      
+    }
+  }
+
+  .pc_shoppingguide_title {
+    padding: 30px 0;
+    text-align: center;
+    
+    @media(max-width: 549px) {
+      display: none;
+    }
+  }
+  
+  .sp_shpppingguide_title {
+    padding: 20px 0;
+    display: block;
+    margin: 0 auto;
+  
+    @media(min-width: 550px) {
+      display: none;
+    }
+  }
+  
+  .shoppingguide_area {
+    background: $lgray;
+    
+    @media(min-width: 550px) {
+      margin-bottom: 90px;
+    }
+    
+    .flex_box {
+      @include display-flex;
+      
+      @media(min-width: 550px) {
+        @include justify-content(space-between);
+        // メモ：フレックスボックス間に隙間をつくるため、両端に設置する
+      }
+      
+      @media(max-width: 549px) {
+        @include flex-direction(column);
+        @include align-content (bitween);
+        
+        .shopping + .shopping {
+          margin-top: 4px;
+        // スマホ表示で立て並べの際、二つ目のshoppingだけにmargin-topを設定して隙間をつくる
+        }
+      }
+      
+      .shopping {
+        background: white;
+        
+        @media(min-width: 550px) {
+          width: 49%;
+        // メモ：PC表示のみ横並びにする、-1%は隙間を作るため
+        }
+        
+      }
+
+    }
+  
+    .midashi {
+      color: $brown;
+      @include fontsize(16);
+      padding: 15px 0px 10px 10px;
+    }
+    
+    .komidashi {
+      color: $brown;
+      @include fontsize(12);
+      padding-left: 10px;
+    }
+    
+    .guide_picture {
+      padding: 10px 0px 10px 10px;
+    }
+    
+    p {
+      @include fontsize(12);
+      padding: 10px 0px 10px 10px;
+    }
+  }
+  
+  .right_area {
+    
+    @media(min-width: 550px) {
+      padding-top: 40px;
+    }
+    
+    .search_area {
+    
+      background: white;
+      padding-bottom: 20px; //search_form下のmargin相殺現象回避
+      
+      @media (max-width: 549px){
+        margin-top: 15px;
+        margin-bottom: 5px;
+        padding: 22px 0;
+      }
+    
+    }
+    
+    .search_title {
+      display: block;
+      padding: 20px 0 0 20px;
+      
+      @media (max-width: 549px){
+        display: none;
+      }
+      
+    }
+    
+    .search_form {
+      width: 80%;
+      background: $lgray url('../images/top/search_icon.png') no-repeat right 10px bottom 50%;
+      border: none;
+      display: block;
+
+      @media (min-width: 550px) {
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @media (max-width: 549px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    
+    input::-webkit-input-placeholder {
+      color: $mgray;
+    }
+    // メモ：検索ボックス内のテキスト色の変更
+    
+    .right_menus:nth-child(n + 2) {
+          margin-top: 10px;
+    }
+    
+    .right_menus {
+      background: $brown;
+      border: none;
+      @include display-flex;
+      // margin-top: 10px;
+
+      .title_brown {
+        padding: 20px 0 20px 15px;
+      }
+      
+      .next_white {
+        margin-left: auto;
+        padding: 18px 15px 18px 0px;
+      }
+      
+      .next_down {
+        margin-left: auto;
+        padding: 20px 15px 20px 0px;
+      }
+      
+    }
+    
+    .pegelink_area {
+      @media (max-width: 549px) {
+        margin-top: 15px;
+      }
+    }
+    //メモ：search下とのmargin相殺解消
+    
+    #toggle_btn {
+      cursor: pointer;
+    }
+    
+    .category_toggle {
+      display: none;
+      list-style: none;
+      
+      li {
+        display: block;
+        @include fontsize(12);
+        padding: 18px 10px 18px 15px;
+        background: white url('../images/top/next_icon_gray.png') no-repeat right 18px bottom 54%; //potisionは右下から設定
+        border-bottom: solid thin $lgray;
+      }  
+      
+    }
+    
+    .contents_area {
+      background: white;
+      
+      .content_picture {
+        padding: 10px;
+      }
+      
+      p {
+        padding: 0 20px 0 10px;
+        @include fontsize(12);
+        @media (max-width: 549px) {
+          margin-top: 10px;
+        }
+      }
+      
+      .more {
+        // padding: 20px 60px;
+        padding: 20px 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    
+      .flex_box {
+        
+        @media (max-width: 549px) {
+          @include display-flex;
+          // メモ：スマホ表示の時のみ、横並びにするためフレックスボックスを有効にする。
+          
+          .flex_pic {
+            width: 50%;
+          }
+          
+          .flex_titlemore {
+            width: 50%;
+          }
+          
+        }
+      }  
+      
+    }
+  
+    .page_top {
+      @media (min-width: 550px) {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      
+      @media (max-width: 549px) {
+        display: block;
+        text-align: center;
+        padding: 20px 100px;
+      }
+    } 
+  } //right_area
+} //body
+
+footer {
+  background: $lgray;
+  padding-bottom: 100px;
+  
+  p {
+    text-align: center;
+    display: block;
+    padding-top: 30px;
+    color: black;
+    @include fontsize(12);
+  }  
+    
+  small {
+    text-align: center;
+    display: block;
+    padding-top: 20px;
+    color: $mgray;
+    // @include fontsize(10);
+  }
+
+}
+
+
+
+h1{
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+// h1に初期状態で設定されているmargin paddingを初期化
+
+a{
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul{
+  margin-bottom: 0;
+}
+
+li{
+  margin-bottom: 0;
+}
+
+form {
+  margin-bottom: 0;
+}
+
+input {
+  margin-bottom: 0;
+  padding: 0;
+}

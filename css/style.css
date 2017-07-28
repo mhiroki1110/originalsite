@@ -6,7 +6,21 @@ body {
   line-height: 0; }
 
 header {
-  background: #1b9c72; }
+  width: 100%;
+  background: #1b9c72;
+  border-bottom: solid 10px  black;
+  position: fixed;
+  z-index: 1; }
+  header .container {
+    max-width: 100%;
+    width: 100%; }
+    @media (max-width: 549px) {
+      header .container {
+        padding: 0; } }
+  header .columns {
+    margin-left: 0; }
+  header .six.columns {
+    width: 50%; }
   header .header_in {
     padding: 40px 0;
     display: -webkit-flex;
@@ -14,31 +28,50 @@ header {
     @media (max-width: 549px) {
       header .header_in {
         padding: 20px 0; } }
-    header .header_in .pc_toiawase {
-      display: block;
-      margin-left: auto;
-      padding-top: 5px; }
-      @media (max-width: 549px) {
-        header .header_in .pc_toiawase {
-          display: none; } }
-    header .header_in .sp_toiawase {
-      padding-top: 1%;
+    header .header_in .icon {
+      padding-top: 8px;
       font-size: 20px;
       line-height: 0;
       display: block;
+      width: 40px;
+      height: 40px;
+      text-align: center;
       margin-left: auto;
-      color: white;
-      text-align: right; }
-      @media (min-width: 550px) {
-        header .header_in .sp_toiawase {
-          display: none; } }
+      margin-right: 20%;
+      color: #1b9c72;
+      background-color: white;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box; }
+      @media (max-width: 549px) {
+        header .header_in .icon {
+          padding-top: 4px;
+          font-size: 10px;
+          width: 20px;
+          height: 20px; } }
+    header .header_in .logo {
+      padding-left: 20%;
+      height: 28px; }
+      @media (max-width: 549px) {
+        header .header_in .logo {
+          height: 18px; } }
+
+#dummy {
+  background: #1b9c72;
+  height: 130px; }
+  @media (max-width: 549px) {
+    #dummy {
+      height: 70px; } }
 
 .cover_area {
   text-align: left;
-  border-top: solid 10px black;
   border-bottom: solid 10px  black;
   background-image: url("../images/cover.png");
-  background-size: cover; }
+  background-size: cover;
+  background-position: center center; }
   .cover_area .container {
     max-width: 100%;
     width: 100%; }
@@ -129,12 +162,6 @@ header {
     margin-left: auto;
     margin-right: 20px; } }
 
-.omakasekudasai .container {
-  max-width: 100%;
-  width: 100%; }
-  @media (max-width: 549px) {
-    .omakasekudasai .container {
-      padding: 0; } }
 .omakasekudasai .man_three {
   display: block;
   margin-top: 40px;
@@ -152,15 +179,8 @@ header {
       font-size: 28px;
       font-size: 2.8rem;
       margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 50px; } }
+      margin-right: auto; } }
 
-.tokucyo .container {
-  max-width: 100%;
-  width: 100%; }
-  @media (max-width: 549px) {
-    .tokucyo .container {
-      padding: 0; } }
 .tokucyo p {
   text-align: center;
   font-size: 24px;
@@ -186,14 +206,12 @@ header {
       margin-left: auto;
       margin-right: auto; } }
 
-.obi {
-  margin-top: 50px; }
-  .obi .container {
-    max-width: 100%;
-    width: 100%; }
-    @media (max-width: 549px) {
-      .obi .container {
-        padding: 0; } }
+.obi .container {
+  max-width: 100%;
+  width: 100%; }
+  @media (max-width: 549px) {
+    .obi .container {
+      padding: 0; } }
 
 .syurui {
   margin-top: 40px; }
@@ -202,19 +220,17 @@ header {
   .syurui .flex_box {
     display: -webkit-flex;
     display: flex; }
-  .syurui .left_area {
-    border-right: solid thin black;
-    padding-right: 30px; }
-    @media (min-width: 870px) {
-      .syurui .left_area {
-        width: 70%;
-        margin-left: auto; } }
-  .syurui .right_area {
-    padding-left: 30px; }
-    @media (min-width: 870px) {
-      .syurui .right_area {
-        width: 70%;
-        margin-right: auto; } }
+  @media (min-width: 870px) {
+    .syurui .left_area {
+      border-right: solid thin black;
+      width: 70%;
+      margin-left: auto;
+      padding-right: 30px; } }
+  @media (min-width: 870px) {
+    .syurui .right_area {
+      width: 70%;
+      margin-right: auto;
+      padding-left: 30px; } }
   .syurui img {
     display: block;
     margin-left: auto;
@@ -261,8 +277,8 @@ header {
       margin-left: auto; } }
 .sample p {
   text-align: left;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 10px;
+  font-size: 1rem;
   line-height: 28px;
   padding-top: 20px; }
   @media (max-width: 549px) {
@@ -278,28 +294,22 @@ header {
   .sample .sample_number span {
     color: #1b9c72; }
 
-.toiawase_two .container {
-  max-width: 100%;
-  width: 100%; }
-  @media (max-width: 549px) {
-    .toiawase_two .container {
-      padding: 0; } }
-.toiawase_two .address {
+#toiawase_two .address {
   text-align: center;
   font-size: 48px;
   font-size: 4.8rem;
   padding: 40px 0; }
   @media (max-width: 549px) {
-    .toiawase_two .address {
+    #toiawase_two .address {
       font-size: 26px;
       font-size: 2.6rem; } }
-.toiawase_two p {
+#toiawase_two p {
   text-align: center;
   font-size: 24px;
   font-size: 2.4rem;
   line-height: 44px; }
   @media (max-width: 549px) {
-    .toiawase_two p {
+    #toiawase_two p {
       text-align: left;
       font-size: 18px;
       font-size: 1.8rem;
@@ -319,7 +329,8 @@ footer {
     @media (max-width: 549px) {
       footer p {
         font-size: 12px;
-        font-size: 1.2rem; } }
+        font-size: 1.2rem;
+        margin-top: 0; } }
 
 .danraku_one {
   height: 120px;
@@ -343,9 +354,6 @@ footer {
   background: white;
   margin-top: 50px;
   border: solid thin #1b9c72; }
-  @media (max-width: 549px) {
-    .danraku_two {
-      margin-top: 0px; } }
   .danraku_two p {
     color: #1b9c72;
     font-size: 48px;

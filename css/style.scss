@@ -24,50 +24,105 @@ body {
 }
 
 header {
-  background: $green;
   
+  width: 100%;
+  background: $green;
+  border-bottom: solid 10px  black;
+  
+  position: fixed;
+  z-index: 1;
+  //固定表示（フローティング）
+  
+  .container {
+    max-width: 100%;
+    width: 100%;
+    //skeletonのwidth960pxを初期化
+      
+    @media (max-width: 549px) {
+      padding: 0;
+    }
+  }
+  
+  .columns {
+    margin-left: 0;
+    //skeleton グリッド間のmargin初期化
+  }
+  
+  .six.columns {
+    width: 50%;
+    //skeleton 6colomunsのwidth初期化
+  }
+
   .header_in{
     padding: 40px 0;
 
     @include display-flex;
+    //グリッドだけどロゴとアイコンは収縮しても常に横並びにしたいためフレックス
 
     @media (max-width: 549px) {
-      
       padding: 20px 0;
     }
 
-    .pc_toiawase {
-      display: block;
-      margin-left: auto;
-      padding-top: 5px;
+    // .pc_toiawase {
+    //   display: block;
+    //   margin-left: auto;
+    //   padding-top: 5px;
       
-      @media (max-width: 549px){
-        display: none;
-      }
+    //   @media (max-width: 549px){
+    //     display: none;
+    //   }
       
-    }
+    // }
     
-    .sp_toiawase {
-      padding-top: 1%;
+    .icon {
+      padding-top: 8px;
       font-size: 20px;
       line-height: 0;
       display: block;
+      width: 40px; 
+      height: 40px;
+      text-align: center;
       margin-left: auto;
-      color: white;
-      text-align: right;
+      margin-right: 20%;
+      color: $green;
+      background-color: white;
+      @include border-radius(50%);
+      @include box-sizing(border-box);
 
-      @media (min-width: 550px){
-        display: none;
+      @media (max-width: 549px){
+        padding-top: 4px;
+        font-size: 10px;
+        width: 20px; 
+        height: 20px;
+      }
+    }
+    
+    .logo {
+      padding-left: 20%;
+      height: 28px;
+      
+      @media (max-width: 549px){
+        height: 18px;
       }
     }
     
   }
 }
 
+#dummy {
+  background: $green;
+  height :130px;
+  
+  @media (max-width: 549px){
+        height: 70px;
+  }
+}
+//手前に出ているheaderの後ろのスペースを埋めるダミークラス
+
+
 .cover_area{
   
   text-align: left;
-  border-top: solid 10px black;
   border-bottom: solid 10px  black;
   
   .container {
@@ -80,6 +135,7 @@ header {
 
   background-image: url("../images/cover.png");
   background-size: cover;
+  background-position: center center;
 
   @media screen and (-webkit-min-device-pixel-ratio:2),
                   (min-resolution: 2dppx){
@@ -204,18 +260,7 @@ header {
 }
 
 .omakasekudasai {
-  
-  .container {
-    max-width: 100%;
-    width: 100%;
-    //skeletonのwidth960pxを初期化
-    
-    @media (max-width: 549px) {
-      padding: 0;
-    }
-    
-  }
-  
+
   .man_three {
     display: block;
     margin-top: 40px;
@@ -234,7 +279,6 @@ header {
       @include fontsize(28);
       margin-left: auto;
       margin-right: auto;
-      margin-bottom: 50px;
     }
     
   }
@@ -242,16 +286,6 @@ header {
 }
 
 .tokucyo {
-  
-  .container {
-    max-width: 100%;
-    width: 100%;
-    //skeletonのwidth960pxを初期化
-    
-    @media (max-width: 549px) {
-      padding: 0;
-    }
-  }
   
   p {
     text-align: center;
@@ -282,7 +316,6 @@ header {
 }
 
 .obi {
-  margin-top: 50px;
   
   .container {
     max-width: 100%;
@@ -310,21 +343,21 @@ header {
   }
   
   .left_area  {
-    border-right: solid thin black;
-    padding-right: 30px;
   
     @media (min-width: 870px) {
+      border-right: solid thin black;
       width: 70%;  
       margin-left: auto;
+      padding-right: 30px;
     }
   }
   
   .right_area  {
-    padding-left: 30px;
     
     @media (min-width: 870px) {
       width: 70%;  
       margin-right: auto;
+      padding-left: 30px;
     }
   }
   
@@ -394,7 +427,7 @@ header {
   
   p {
     text-align: left;
-    @include fontsize(18);
+    @include fontsize(10);
     line-height: 28px;
     padding-top: 20px;
     
@@ -419,17 +452,7 @@ header {
   
 }
 
-.toiawase_two {
-  
-  .container {
-    max-width: 100%;
-    width: 100%;
-    //skeletonのwidth960pxを初期化
-    
-    @media (max-width: 549px) {
-      padding: 0;
-    }
-  }
+#toiawase_two {
   
   .address {
     text-align: center;
@@ -471,6 +494,7 @@ footer{
     
     @media (max-width: 549px) {
       @include fontsize(12);
+      margin-top: 0;
     }
     
   }
@@ -501,10 +525,6 @@ footer{
   background: white;
   margin-top: 50px;
   border: solid thin $green;
-  
-  @media (max-width: 549px) {
-    margin-top: 0px;
-  }
   
   p{
     color: $green;

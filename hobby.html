@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>ショッピングサイトサンプル</title>
+    <meta name="description" content="Lesson9課題提出用のショッピングサイトサンプル"> <!--メモ：descriptionはサイトの説明文（SEO対策に必要）authorは作者名（不要？）-->
+    <meta name="author" content="Hiroki Murakami">
+    
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css"> <!--メモ：レスポンシブ（グリッド）に対応するためにskeleton要-->
+    <link rel="stylesheet" href="css/hobby.css">
+  
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.min.css">
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="owlcarousel/owl.carousel.min.js"></script>
+    
+    <!-- 追加するJS -->
+    <script src="test-carousel.js"></script>
+    <script src="slideToggle.js"></script>
+    <script src="slideToggle2.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div id="header_in" class="container">
+      <div class="low">
+          
+        <div class="six columns logo">
+          <div class="pc_logo">
+              <h1>
+                <!--<a href="index.html">-->
+                    <img class="u-max-full-width" src="images/hobby/logo.png" alt="apple berry" srcset="images/hobby/logo@2x.png 2x" /> <!--メモ：u-max-full-widthもSkeleton独自のユーティリティクラス / altは画像が見れない場合の動作を定義 / srcsetはRetina用の2倍サイズ画像のURLを指定。最後に2xをつける-->
+                <!--</a>-->
+              </h1>
+          </div>
+          
+          <div class="sp_logo">
+              <h1>
+                <!--<a href="index.html">-->
+                    <img class="u-max-full-width" src="images/hobby_sp/logo.png" alt="apple berry" srcset="images/hobby_sp/logo@2x.png 2x" />
+                <!--</a>-->
+              </h1>
+          </div>
+            
+        </div>
+        
+        <div class="six columns navi">
+            
+          <div class="pc_menu">
+            <ul class="pc_navi">
+              <li><img class="u-max-full-width" src="images/hobby/menu_login.png" alt="login"></li>
+              <li><img class="u-max-full-width" src="images/hobby/menu_cart.png" alt="cart"></li>
+              <li><img class="u-max-full-width" src="images/hobby/menu_mypage.png" alt="mypage"></li>
+              <li><img class="u-max-full-width" src="images/hobby/menu_guide.png" alt="guide"></li>
+            </ul>
+            
+            <div class="pc_fbin">
+              <img id="facebook_btn" class="u-max-full-width" src="images/hobby/facebook.png" alt="facebook_bottun" />
+              <img id="instagram_btn" class="u-max-full-width" src="images/hobby/insta.png" alt="instagram_bottun" />
+            </div>            
+          </div>
+          
+          <div class="sp_menu">
+            <div class="sp_fbin">
+              <img id="sp_facebook_btn" class="u-max-full-width" src="images/hobby_sp/fb.png" alt="facebook_bottun" srcset="images/hobby_sp/fb@2x.png 2x" />
+              <img id="sp_instagram_btn" class="u-max-full-width" src="images/hobby_sp/insta.png" alt="instagram_bottun" srcset="images/hobby_sp/insta@2x.png 2x" />
+              <img id="sp_navi_btn" class="u-max-full-width" src="images/hobby_sp/menu_icon.png" alt="sp_navi" srcset="images/hobby_sp/menu_icon@2x.png 2x" />
+              <ul class="sp_navi_li">
+                <li class="sp_navi_login">LOGIN</li>
+                <li class="sp_navi_cart">CART</li>
+                <li class="sp_navi_mypage">MY PAGE</li>
+                <li class="sp_navi_shoppingguide">SHOPPING GUIDE</li>
+              </ul>
+            </div>
+          </div>
+        </div>   
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <div class="low">
+
+        <div class="nine columns left_area">
+          <div class="cover_area">
+            <div class="owl-carousel owl-theme">
+              <div><img class="u-max-full-width" src="images/hobby/ca_banner.jpg" alt="banner" ></div>
+              <div><img class="u-max-full-width" src="images/hobby/ca_banner.jpg" alt="banner" ></div>
+              <div><img class="u-max-full-width" src="images/hobby/ca_banner.jpg" alt="banner" ></div>
+              <div><img class="u-max-full-width" src="images/hobby/ca_banner.jpg" alt="banner" ></div>
+            </div>
+          </div>
+
+          <img class="pc_newitems_title u-max-full-width" src="images/hobby/title_newitems.png" alt="title_newitems" >
+          <img class="sp_newitems_title u-max-full-width" src="images/hobby_sp/title_new_item.png" alt="title_newitems" srcset="images/hobby_sp/title_new_item@2x.png 2x" >
+          <div class="newitem_area">
+            <div class="flex_box">
+              <div class="newitems items1">
+                <img class="u-max-full-width" src="images/hobby/item_01.jpg" alt="item1" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="newitems items2">
+                <img class="u-max-full-width" src="images/hobby/item_02.jpg" alt="item2" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="newitems items3">
+                <img class="u-max-full-width" src="images/hobby/item_03.jpg" alt="item3" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="newitems items4">
+                <img class="u-max-full-width" src="images/hobby/item_04.jpg" alt="item4" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="newitems items5">
+                <img class="u-max-full-width" src="images/hobby/item_05.jpg" alt="item5" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="newitems items6">
+                <img class="u-max-full-width" src="images/hobby/item_06.jpg" alt="item6" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+            </div>
+          </div>
+
+          <img class="pc_popularitems_title u-max-full-width" src="images/hobby/title_popular.png" alt="title_popularitems" >
+          <img class="sp_popularitems_title u-max-full-width" src="images/hobby_sp/title_popular.png" alt="title_popularitems" srcset="images/hobby_sp/title_popular@2x.png 2x" >
+          <div class="popularitem_area">
+            <div class="flex_box">
+              <div class="popularitems">
+                <img class="u-max-full-width" src="images/hobby/item_07.jpg" alt="item7" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="popularitems">
+                <img class="u-max-full-width" src="images/hobby/item_08.jpg" alt="item8" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="popularitems">
+                <img class="u-max-full-width" src="images/hobby/item_09.jpg" alt="item9" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="popularitems">
+                <img class="u-max-full-width" src="images/hobby/item_10.jpg" alt="item10" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="popularitems">
+                <img class="u-max-full-width" src="images/hobby/item_11.jpg" alt="item11" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+              <div class="popularitems">
+                <img class="u-max-full-width" src="images/hobby/item_12.jpg" alt="item12" />
+                <p>商品名が入ります商品名がはいります商品名がはいります</p>
+                <p>¥10,000(tax in)</p>
+              </div>
+            </div>
+          </div>
+  
+          <img class="pc_shoppingguide_title u-max-full-width" src="images/hobby/title_guide.png" alt="title_guide" >
+          <img class="sp_shpppingguide_title u-max-full-width" src="images/hobby_sp/title_guide.png" alt="title_guide" srcset="images/hobby_sp/title_guide@2x.png 2x" >
+          <div class="shoppingguide_area">
+            <div class="flex_box">
+              <div class="shopping">
+                <div class="midashi"><b>お届けについて</b></div>
+                <img class="guide_picture u-max-full-width" src="images/hobby/otodoke_banner.png" alt="otodoke" >
+                <div class="komidashi">■○○運輸</div>
+                <p>送料 ¥０００円</p>
+                <div class="komidashi">■ゆうパケット</div>
+                <p>ポスト投函となります。日時指定不可</p>
+              </div>
+              <div class="shopping">
+                <div class="midashi"><b>決済について</b></div>
+                <div class="komidashi">■カード決済</div>
+                <img class="guide_picture u-max-full-width" src="images/hobby/cards.png" alt="cards" >
+                <div class="komidashi">■代金引換</div>
+                <p>代引き手数料が別途かかります</p>
+                <div class="komidashi">■銀行振込</div>
+                <p>お振込手数料お客様負担。<br>ご入金後の発送となります。</p>
+              </div>
+            </div>
+          </div>
+        </div><!--left_area-->
+        
+        <div class="three columns right_area">
+          <!--<div class="search_area">-->
+          <!--  <img class="search_title u-max-full-width" src="images/hobby/itemserch.png" alt="search" />-->
+          <!--  <form>-->
+          <!--    <input type="text" class="search_form" name="search" placeholder="Search..">-->
+          <!--  </form>-->
+          <!--</div>-->
+          
+          <div class="pegelink_area right_menus">
+            <img class="pagelink_title title_brown u-max-full-width" src="images/hobby/pagelink.png" alt="pagelink" >
+            <img class="next_white u-max-full-width" src="images/hobby/next_icon.png" alt="next" >
+          </div>
+          
+          <div id="toggle_btn" class="categories_area right_menus">
+            <img class="categories_title title_brown u-max-full-width"  src="images/hobby/categories.png" alt="category" >
+            <img id="change_btn" class="next_down u-max-full-width" src="images/hobby/down_icon.png" alt="next" >
+          </div>
+            <ul class="category_toggle">
+              <li>カテゴリー名</li>
+              <li>カテゴリー名</li>
+              <li>カテゴリー名</li>
+              <li>カテゴリー名</li>
+              <li>カテゴリー名</li>
+              <li>カテゴリー名</li>
+            </ul>
+
+          <div class="about_title_area right_menus">
+            <img class="about_title title_brown" src="images/hobby/about.png" alt="about" >
+          </div>
+          <div class="about_contents_area contents_area">
+            <div class="flex_box">
+              <div class="flex_pic">
+                <img class="content_picture u-max-full-width" src="images/hobby/about_img.jpg" alt="aboutimg" >
+              </div>
+              <div class="flex_titlemore">
+                <p>お店の説明お店の説明お店の説明が入りますお店の説明お店の説明お店の説明</p>
+                <img class="more u-max-full-width" src="images/hobby/more_btn.png" alt="morebtn" >
+              </div>
+            </div>
+          </div>
+          
+          <div class="shopinfo_title_area right_menus">
+            <img class="shopinfo_title title_brown u-max-full-width" src="images/hobby/shop_info.png" alt="about" >
+          </div>
+          <div class="shopinfo_contents_area contents_area">
+            <div class="flex_box">
+              <div class="flex_pic">
+                <img class="content_picture u-max-full-width" src="images/hobby/shopinfo_img.jpg" alt="shopimg" >
+              </div>
+              <div class="flex_titlemore">
+                <p>お店の説明お店の説明お店の説明が入りますお店の説明お店の説明お店の説明</p>
+                <img class="more u-max-full-width" src="images/hobby/more_btn.png" alt="morebtn" >
+              </div>
+            </div>
+          </div>
+          
+          <div class="page_top">
+            <img class="page_top_img u-max-full-width" src="images/hobby/pagetop.png" alt="pagetop" />
+          </div>
+        </div><!--right_area-->
+        
+      </div><!--low-->
+    </div><!--container-->
+  </div> <!--main-->
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns footer">
+        <p class="threemenu">特定商取引に基づく表記　・　プライバシーポリシー　・　マイページ</p>
+        <small class="copyright">copyright (C) APPLE BERRY all rights reserved.</small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
