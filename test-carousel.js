@@ -3,9 +3,9 @@ $(document).ready(function(){
         {
             loop: true,
             nav: false,
-            dots: true,
+            dots: false,
             items: 1,
-            autoplay: false
+            autoplay: true
         }
     );
 });
