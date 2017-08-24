@@ -5,7 +5,10 @@ $(document).ready(function(){
             nav: false,
             dots: false,
             items: 1,
-            autoplay: true
+            autoplay: true,
+            autoplayTimeout:2500,
+            lazyLoad: true,
+            animateOut: 'fadeOut',  // WOW-master/css/libs/animate.cssを利用
         }
     );
 });

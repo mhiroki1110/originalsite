@@ -136,6 +136,17 @@ header {
     }
     
   }
+  
+  // .flex_box {
+  //   @include display-flex;
+  //   // @include align-items(center); //カバー画像内のテキストを上下中央寄せするため
+  //   // display:-webkit-box;/*--- Androidブラウザ用 ---*/
+  //   // display:-ms-flexbox;/*--- IE10 ---*/
+  //   // display:-webkit-flex;/*--- safari（PC）用 ---*/
+  //   // -webkit-box-align: center;/*--- Androidブラウザ用 ---*/
+  //   // -ms-flex-align: center;/*--- IE10 ---*/
+  //   // -webkit-align-items: center;/*--- safari（PC）用 ---*/
+  // }
 
   // //背景 retina_bg
 
@@ -148,39 +159,26 @@ header {
   // background-image: url("../images/cover@2x.png");
   // }
   
-  // p {
-  //   color: white;
-  //   position: absolute;
-  //   top: 140px;
-  //   left: 4%;
-  //   z-index: 998;
-  // }
-  
-  @media (min-width: 550px) {
-    // height: 500px;
-    
-    p{
-      color: white;
-      position: absolute;
-      top: 25%;
-      left: 4%;
-      z-index: 998;
+  p {
+    color: white;
+    position: absolute;
+    left: 4%;
+    z-index: 998;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+
+    @media (min-width: 550px) {
       @include fontsize(36);
       line-height: 2.1;
+      text-shadow: 3px 3px #aaa;
     }
-  }
-  
-  @media (max-width: 549px) {
-    // height: 250px;
-    
-    p{
-      color: white;
-      position: absolute;
-      top: 12.5%;
-      left: 4%;
-      z-index: 998;
+
+    @media (max-width: 549px) {
       @include fontsize(18);
       line-height: 2;
+      text-shadow: 2px 2px #aaa;
     }
   }
 }
@@ -193,6 +191,7 @@ header {
     @media (max-width: 549px) {
       margin-left: auto;
       margin-right: auto;
+      height: 150px;
     }
   }
   
@@ -262,6 +261,9 @@ header {
       // margin-top: 40px;
       margin-left: 20px;
     }
+    @media (max-width: 549px) {
+      height: 130px;
+    }
   }
   
   .man_two {
@@ -282,6 +284,11 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
+    
+    @media (max-width: 549px) {
+      height: 150px;
+    }
+    
   }
   
   .teian {
@@ -291,7 +298,7 @@ header {
     
     @media (max-width: 549px) {
       text-align: left;
-      @include fontsize(28);
+      @include fontsize(24);
       margin-left: auto;
       margin-right: auto;
     }
@@ -355,11 +362,12 @@ header {
   
   .flex_box {
     @include display-flex;
+    @include justify-content(center);
   }
   
   .left_area  {
   
-    @media (min-width: 870px) {
+    @media (min-width: 550px) {
       border-right: solid thin black;
       // width: 70%;  
       margin-left: auto;
@@ -369,7 +377,7 @@ header {
   
   .right_area  {
     
-    @media (min-width: 870px) {
+    @media (min-width: 550px) {
       // width: 70%;  
       margin-right: auto;
       padding-left: 30px;
@@ -385,13 +393,11 @@ header {
   }
   
   .html {
-    // padding-bottom: 15%;
     padding-bottom: 50px;
     margin-right: 0;
   }
   
   .css {
-    // padding-top: 20%;
     padding-top: 60px;
     margin-left: 0;
   }
@@ -431,7 +437,7 @@ header {
   
   img {
     display: block;
-    height: 270px;
+    // height: 270px;
     border: solid thin $gray;
     
     @media (max-width:549px) {
@@ -452,7 +458,7 @@ header {
     
     @media (max-width: 549px) {
       text-align: left;
-      @include fontsize(18);
+      @include fontsize(14);
       margin-left: auto;
       margin-right: auto;
     }
@@ -469,6 +475,21 @@ header {
     
   }
   
+  .sonota {
+    text-align: center;
+    @include fontsize(24);
+    line-height: 44px;
+    padding-top: 40px;
+    
+    @media (max-width: 549px) {
+      text-align: left;
+      @include fontsize(18);
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+  }
+  
 }
 
 #toiawase_two {
@@ -479,11 +500,11 @@ header {
     
     display: block;
     text-align: center;
-    @include fontsize(48);
+    @include fontsize(36);
     padding: 40px 0;
     
     @media (max-width: 549px) {
-      @include fontsize(26);
+      @include fontsize(24);
     }
   }
   

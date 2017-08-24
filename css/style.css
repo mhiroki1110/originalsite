@@ -76,33 +76,35 @@ header {
     @media (max-width: 549px) {
       .cover_area .container {
         padding: 0; } }
-  @media (min-width: 550px) {
-    .cover_area p {
-      color: white;
-      position: absolute;
-      top: 25%;
-      left: 4%;
-      z-index: 998;
-      font-size: 36px;
-      font-size: 3.6rem;
-      line-height: 2.1; } }
-  @media (max-width: 549px) {
-    .cover_area p {
-      color: white;
-      position: absolute;
-      top: 12.5%;
-      left: 4%;
-      z-index: 998;
-      font-size: 18px;
-      font-size: 1.8rem;
-      line-height: 2; } }
+  .cover_area p {
+    color: white;
+    position: absolute;
+    left: 4%;
+    z-index: 998;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%); }
+    @media (min-width: 550px) {
+      .cover_area p {
+        font-size: 36px;
+        font-size: 3.6rem;
+        line-height: 2.1;
+        text-shadow: 3px 3px #aaa; } }
+    @media (max-width: 549px) {
+      .cover_area p {
+        font-size: 18px;
+        font-size: 1.8rem;
+        line-height: 2;
+        text-shadow: 2px 2px #aaa; } }
 
 .people img {
   display: block; }
   @media (max-width: 549px) {
     .people img {
       margin-left: auto;
-      margin-right: auto; } }
+      margin-right: auto;
+      height: 150px; } }
 .people .flex_box {
   display: -webkit-flex;
   display: flex;
@@ -154,6 +156,9 @@ header {
 @media (min-width: 550px) {
   .people .women {
     margin-left: 20px; } }
+@media (max-width: 549px) {
+  .people .women {
+    height: 130px; } }
 @media (min-width: 550px) {
   .people .man_two {
     margin-left: auto;
@@ -165,6 +170,9 @@ header {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 40px; }
+  @media (max-width: 549px) {
+    .omakasekudasai .man_three {
+      height: 150px; } }
 .omakasekudasai .teian {
   text-align: center;
   font-size: 30px;
@@ -173,8 +181,8 @@ header {
   @media (max-width: 549px) {
     .omakasekudasai .teian {
       text-align: left;
-      font-size: 28px;
-      font-size: 2.8rem;
+      font-size: 24px;
+      font-size: 2.4rem;
       margin-left: auto;
       margin-right: auto; } }
 
@@ -216,13 +224,15 @@ header {
     margin-left: 0; }
   .syurui .flex_box {
     display: -webkit-flex;
-    display: flex; }
-  @media (min-width: 870px) {
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center; }
+  @media (min-width: 550px) {
     .syurui .left_area {
       border-right: solid thin black;
       margin-left: auto;
       padding-right: 30px; } }
-  @media (min-width: 870px) {
+  @media (min-width: 550px) {
     .syurui .right_area {
       margin-right: auto;
       padding-left: 30px; } }
@@ -264,7 +274,6 @@ header {
 
 .sample img {
   display: block;
-  height: 270px;
   border: solid thin #eeeeee; }
   @media (max-width: 549px) {
     .sample img {
@@ -281,8 +290,8 @@ header {
   @media (max-width: 549px) {
     .sample p {
       text-align: left;
-      font-size: 18px;
-      font-size: 1.8rem;
+      font-size: 14px;
+      font-size: 1.4rem;
       margin-left: auto;
       margin-right: auto; } }
 .sample .sample_number {
@@ -290,19 +299,32 @@ header {
   padding-top: 40px; }
   .sample .sample_number span {
     color: #1b9c72; }
+.sample .sonota {
+  text-align: center;
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 44px;
+  padding-top: 40px; }
+  @media (max-width: 549px) {
+    .sample .sonota {
+      text-align: left;
+      font-size: 18px;
+      font-size: 1.8rem;
+      margin-left: auto;
+      margin-right: auto; } }
 
 #toiawase_two .address {
   color: black;
   text-decoration: none;
   display: block;
   text-align: center;
-  font-size: 48px;
-  font-size: 4.8rem;
+  font-size: 36px;
+  font-size: 3.6rem;
   padding: 40px 0; }
   @media (max-width: 549px) {
     #toiawase_two .address {
-      font-size: 26px;
-      font-size: 2.6rem; } }
+      font-size: 24px;
+      font-size: 2.4rem; } }
 #toiawase_two .address:hover {
   color: #1EAEDB;
   text-decoration: underline; }
